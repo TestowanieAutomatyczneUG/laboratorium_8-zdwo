@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+script:
+  - coverage run tests/FizzBuzzTests.py
+after_success:
+  - coveralls
+
+repo_token: Zdlh9ROOKn5X8ecatNi75SH7UmyFWhrkB
